@@ -46,9 +46,9 @@ public ResponseEntity<Void> save(@RequestBody Pedido pedido) {
 
     Pedido p = OrderSet.save(pedido);
 
-    URI url = URI.create("http://localhost:8080/pedidos/" + p.getId());
+    URI uri = URI.create("http://localhost:8080/pedidos/" + p.getId());
 
-    return ResponseEntity.created(url).build();
+    return ResponseEntity.created(uri).build();
 }
 
 @DeleteMapping("/{id}")
